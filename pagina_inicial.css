@@ -1,0 +1,132 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#promo_cep{
+    display: flex;
+    justify-content: space-around;
+    background-color:#ada390;
+    color: white;
+}
+#cabecalho{
+    display: flex;
+    background-color: #ffb18b;
+    justify-content: space-between;
+}
+#logo{
+    width: 256px;
+    height: 75px;
+    margin: 15px;
+    
+}
+#opcoes{
+    display: flex;
+    
+}
+.icons{
+    width: 40px;
+    height: 40px;
+    color:white;
+    margin: 30px 10px 30px 10px;
+}
+#menu{
+    display:flex;
+    border: solid 6px #ffb18b;
+    margin:20px;
+    justify-content: space-around;
+}
+.opcoes_menu{
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+
+
+#promo_tops{
+    width: 800px;
+    height: 300px;
+}
+#promo{
+    display: flex;
+    justify-content: center;
+}
+.flecha{
+    width: 60px;
+    height: 60px;
+    margin-top: 150px;
+    margin-bottom: 95px;
+    color:  #ffb18b;
+}
+.comprar{
+    background-color: #ffb18b;
+    color: white;
+    width: 180px;
+    height: 60px;
+    font-size: 40px;
+    text-align: center;
+    display: block;
+    border-radius: 20px;
+
+}
+.linkcomprar{
+    text-decoration: none;
+}
+#produtos{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.prod{
+    width: 200px;
+    height: 250px;
+}
+.imagens_prod{
+    width: 183px;
+    height: 228px;
+}
+.descricao{
+    font-size: 30px;
+}
+.preco{
+    font-size: 30px;
+}
+
+
+
+#rodape{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    background-color: #ffb18b;
+    height: 90px;
+}
+#form{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+#botao{
+    background-color: #ffb18b;
+    font-size: 20px;
+    width: 70px;
+    height: 30px;
+    color: white;
+    border: solid 3px white;
+}
+#novidds{
+    font-size: 30px;
+    color: white;
+    padding-left: 10px;
+}
+#redessociais{
+    display: flex;
+}
+.sociais{
+    width: 40px;
+    height: 40px;
+    color:white;
+    margin: 30px 10px 30px 10px;
+}
+.nome_email{
+    font-size: 20px;
+}

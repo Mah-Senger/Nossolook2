@@ -1,0 +1,130 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#cabecalho{
+    display: flex;
+    background-color: #ffb18b;
+    justify-content: space-between;
+}
+#logo{
+    width: 256px;
+    height: 75px;
+    margin: 15px;
+    
+}
+#opcoes{
+    display: flex;
+    
+}
+.icons{
+    width: 40px;
+    height: 40px;
+    color:white;
+    margin: 30px 10px 30px 10px;
+}
+#menu{
+    display:flex;
+    border: solid 6px #ffb18b;
+    margin:20px;
+    justify-content: space-around;
+}
+.opcoes_menu{
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+
+
+#pag{
+    display: flex;
+    justify-content: center;
+}
+#entrar{
+    margin-right: 80px;
+    border-right: dashed #ffb18b 4px;
+    height: 400px;
+}
+#email{
+    border: #ffb18b solid 3px;
+    margin-bottom: 30px;
+    width: 400px;
+    height: 30px;
+    font-size: 30px;
+    margin-right: 40px;
+}
+#senha{
+    border:solid #ffb18b 3px;
+    margin-bottom: 30px;
+    width: 400px;
+    height: 30px;
+    font-size: 30px;
+    margin-right: 40px;
+}
+.title{
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+#title2{
+    font-size: 35px;
+    margin-top: 70px;
+}
+#botao1{
+    background-color: white;
+    border:#ffb18b solid 6px;
+    width: 300px;
+    height: 50px;
+    font-size: 40px;
+    color: #ffb18b;
+    margin-left: 50px;
+}
+#botao2{
+    background-color: white;
+    border:#ffb18b solid 6px;
+    width: 300px;
+    height: 50px;
+    font-size: 40px;
+    color: #ffb18b;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+
+
+#rodape{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+    background-color: #ffb18b;
+    height: 90px;
+}
+#form{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+#botao{
+    background-color: #ffb18b;
+    font-size: 20px;
+    width: 70px;
+    height: 30px;
+    color: white;
+    border: solid 3px white;
+}
+#novidds{
+    font-size: 30px;
+    color: white;
+    padding-left: 10px;
+}
+#redessociais{
+    display: flex;
+}
+.sociais{
+    width: 40px;
+    height: 40px;
+    color:white;
+    margin: 30px 10px 30px 10px;
+}
+.nome_email{
+    font-size: 20px;
+}

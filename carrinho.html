@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="carrinho.css"> 
+    <title>Carrinho | Nosso Look</title>
+    <link rel="shortcut icon" href="logo_topo2.png">
+</head>
+<body>
+    <div id="promo_cep">
+        <p>Parcele Suas Compras Em Até 5X</p> 
+        <p>Frete Gratis Nas Compras Acima de R$199,99</p>
+        <p>Entregamos Para Todo o Brasil</p>
+    </div>
+    <div id="cabecalho">
+        <div><img src="logo.jpg" alt="logo" id="logo"></div>
+        <div id="opcoes">
+            <a href="carrinho.html"><ion-icon name="cart-outline" title="Carrinho" class="icons"></ion-icon></a>
+            <a href="entrar_cadastre-se.html"><ion-icon name="person-circle-outline"  class="icons"></ion-icon></ion-icon></a>
+            <a href="n_pedido.html"><ion-icon name="cube-outline" class="icons"></ion-icon></ion-icon></a>
+        </div>
+    </div>
+    <div id="menu">
+        <a href="pagina_inicial.html" class="opcoes_menu"><p>Home</p></a>
+        <a href="blusas.html" class="opcoes_menu"><p>Blusas</p></a>
+        <a href="vestidos.html" class="opcoes_menu"><p>Vestidos</p></a>
+        <a href="calcas.html" class="opcoes_menu"><p>Calças e Shorts</p></a>
+        <a href="sobre.html" class="opcoes_menu"><p>Sobre nós</p></a>
+    </div>
+     <div id="conteudo">
+         <h1>Meu carrinho</h1>
+         <div id="tudo">
+         <div id="lista">
+             <ul class="lista">
+                 <div class="produto"><li><h3>Produto</h3></li></div>
+                 <div class="quant"><li><h3>Quantidade</h3></li></div>
+                 <div class="remover"><li><h3>Remover</h3></li></div>
+                 <li><h3>Preço</h3></li>
+             </ul>
+             <ul class="lista">
+                <div class="produto"> <li><div class="lado"><img src="roupas/blusa3.jpeg">
+                <div id="moletom"><h3>Moletom panda</h3>
+                <p>Tamanho:P,M</p></div></li></div>
+                <div class="quant" ><li class="quantidade" class="li">2</li></div>
+                <div class="remover"><li class="li"><div ><a href=""><ion-icon name="trash-outline" class="iconslixo"></ion-icon></a></div></li></div>
+                <li class="li">R$179,80</li>
+             </ul>
+             <ul class="lista">
+                <div class="produto"><li><div class="lado"><img src="roupas/blusa4.jpeg">
+               <div id="camisa"><h3>Blusa Cetim poá</h3>
+               <p>Tamanho: M</p></div></li></div>
+               <div class="quant"><li class="quantidade" class="li">1</li></div>
+               <div class="remover"><li class="li"><div><a href=""><ion-icon name="trash-outline" class="iconslixo"></ion-icon></a></div></li></div>
+               <li class="li">R$59,90</li>
+            </ul>
+            <ul class="lista">
+                <div class="produto"><li><div class="lado"><img src="roupas/calca2.jpeg">
+               <div id="calca"><h3>Calça jeans</h3>
+               <p>Tamanho:GG</p></div></li></div>
+               <div class="quant"><li class="quantidade" class="li">1</li></div>
+               <div class="remover"><li class="li"><div ><a href=""><ion-icon name="trash-outline" class="iconslixo"></ion-icon></a></div></li></div>
+               <li class="li">R$99,90</li>
+            </ul>
+            <ul class="lista">
+                <div class="produto"><li><div class="lado"><img src="roupas/vestido3.jpeg">
+               <div id="vestido"><h3>Vestido godê</h3>
+            <p>Estampa branca limão</p><p>Tamanho:P</p></div></li></div>
+            <div class="quant"><li class="quantidade" class="li">1</li></div>
+            <div class="remover"><li class="li"><div><a href=""><ion-icon name="trash-outline" class="iconslixo"></ion-icon></a></div></li></div>
+               <li class="li">R$170,00</li>
+            </ul>
+         </div>
+         <div>
+         <div id="frete">
+            <h2 id="tit_cep">Frete:</h2>
+            <div id="cep3">
+                <ion-icon name="ellipse" class="cep" id="cep_prim"></ion-icon>
+                <ion-icon name="ellipse" class="cep"></ion-icon>
+                <ion-icon name="ellipse" class="cep"></ion-icon>
+                <ion-icon name="ellipse" class="cep"></ion-icon>
+                <ion-icon name="ellipse" class="cep"></ion-icon>
+                <ion-icon name="ellipse" class="cep"></ion-icon>
+                <ion-icon name="ellipse" class="cep"></ion-icon>
+                <ion-icon name="ellipse" class="cep"></ion-icon>
+                <ion-icon name="eye-off-outline" id="cep2"></ion-icon>
+             </div>
+             <p id="altcep">Alterar CEP</p>
+            </div>
+         <div id="resumo">
+             <div id="cima">
+                 <h2 id="h2">Resumo do pedido</h2>
+                 <div class="somar">
+                 <p>Moletom panda (2 unidades)</p>
+                 <p>R$179,80</p>
+                 </div>
+                    <div class="somar">
+                    <p>Blusa Cetim poá</p>
+                    <p>R$59,99</p>
+                    </div>
+                        <div class="somar">
+                        <p>Calça jeans</p>
+                        <p>R$99,90</p>
+                        </div>
+                            <div class="somar">
+                            <p>Vestido godê estampado</p>
+                            <p>R$170,00</p>
+                            </div>
+                            <div class="somar">
+                                <p>Frete</p>
+                                <p>Grátis</p>
+                            </div>
+             </div>
+             <div id="baixo">
+             <div class="somar">
+                 <h3>Total</h3>
+                 <p>R$509,60</p>
+             </div>
+             <div id="finalizar"><a href="Finalizar_pedido.html" id="nao"><p>Finalizar pedido</p></a></div>
+             <div class="continuar"><a href="pagina_inicial.html" id="none"><p>Continuar comprando</p></a></div>
+             </div>
+         </div>
+         </div>
+     </div>
+    </div>
+
+    <div id="rodape">
+        <div>
+        <p id="novidds">Fique por dentro das novidades!!</p>
+        <form action="" method="" id="form">
+            <input type="text" class="nome_email" placeholder="Nome">
+            <input type="email" class="nome_email" placeholder="Email">
+            <button type="submit" id="botao">Enviar</button>
+        </form>
+    </div>
+    <div id="redessociais">
+        <a href="https://www.facebook.com/"><ion-icon name="logo-facebook" class="sociais"></ion-icon></a>
+        <a href="https://www.instagram.com/"><ion-icon name="logo-instagram" class="sociais"></ion-icon></a>
+        <a href="https://twitter.com/"><ion-icon name="logo-twitter" class="sociais"></ion-icon></a>
+        <a href=""><ion-icon name="logo-whatsapp" class="sociais"></ion-icon></a>
+        <a href="entraradd.html"><ion-icon name="options" class="sociais"></ion-icon></a>
+    </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+</body>
+</html>

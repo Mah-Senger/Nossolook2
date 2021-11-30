@@ -1,0 +1,131 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#cabecalho{
+    display: flex;
+    background-color: #ffb18b;
+    justify-content: space-between;
+}
+#logo{
+    width: 256px;
+    height: 75px;
+    margin: 15px;
+    
+}
+#opcoes{
+    display: flex;
+    
+}
+.icons{
+    width: 40px;
+    height: 40px;
+    color:white;
+    margin: 30px 10px 30px 10px;
+}
+#menu{
+    display:flex;
+    border: solid 6px #ffb18b;
+    margin:20px;
+    justify-content: space-around;
+}
+.opcoes_menu{
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+
+
+#cads{
+    margin-top: 80px;
+    margin-left: 230px;
+    border: 3px #ffb18b solid;
+    padding: 20px;
+    padding-left: 100px;
+    padding-top: 30px;
+    width: 800px;
+    height: 900px;
+}
+.campo_form{
+    width: 700px;
+    height: 35px;
+    border: solid 3px #ffb18b;
+    font-size: 30px;
+    margin-bottom: 15px;
+
+}
+.campo_form2{
+    width: 500px;
+    height: 35px;
+    border: solid 3px #ffb18b;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.campo_form3{
+    width: 360px;
+    height: 35px;
+    border: solid 3px #ffb18b;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.datanasc_sexo{
+    font-size: 35px;
+}
+.sexo_opc{
+    font-size: 30px;
+}
+.atencao_end{
+    color: red;
+    font-size: 23px;
+    margin-top: -10px;
+}
+#botao_cads{
+    background-color: white;
+    border:#ffb18b solid 6px;
+    width: 350px;
+    height: 70px;
+    font-size: 50px;
+    color: #ffb18b;
+    margin-top: 40px;
+    margin-left: 170px;
+}
+
+
+
+#rodape{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    background-color: #ffb18b;
+    height: 90px;
+}
+#form{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+#botao{
+    background-color: #ffb18b;
+    font-size: 20px;
+    width: 70px;
+    height: 30px;
+    color: white;
+    border: solid 3px white;
+}
+#novidds{
+    font-size: 30px;
+    color: white;
+    padding-left: 10px;
+}
+#redessociais{
+    display: flex;
+}
+.sociais{
+    width: 40px;
+    height: 40px;
+    color:white;
+    margin: 30px 10px 30px 10px;
+}
+.nome_email{
+    font-size: 20px;
+}

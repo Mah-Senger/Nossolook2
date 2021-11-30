@@ -1,0 +1,130 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#cabecalho{
+    display: flex;
+    background-color: #ffb18b;
+    justify-content: space-between;
+}
+#logo{
+    width: 256px;
+    height: 75px;
+    margin: 15px;
+    
+}
+#opcoes{
+    display: flex;
+    
+}
+.icons{
+    width: 40px;
+    height: 40px;
+    color:white;
+    margin: 30px 10px 30px 10px;
+}
+#menu{
+    display:flex;
+    border: solid 6px #ffb18b;
+    margin:20px;
+    justify-content: space-around;
+}
+.opcoes_menu{
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+
+#conteudo{
+    display: flex;
+}
+#quadro{
+    border: solid 7px #ffb18b;
+    margin-left: 70px;
+    margin-right: 100px;
+    width: 150px;
+    height: 300px;
+}
+h2{
+    margin: 20px;
+}
+#cima{
+    border-bottom: solid 2px #ffb18b;
+}
+.none{
+    text-decoration: none;
+    color: gray;
+}
+.meio{
+    margin:20px;
+}
+#img{
+    height: 300px;
+    margin-right: 50px;
+}
+h1{
+    color:#ffb18b;
+}
+.input{
+    border: solid 3px #ffb18b;
+    width: 250px;
+}
+.elemento_form{
+    margin-bottom: 20px;
+}
+.velho{
+    margin-bottom: 10px;
+}
+#bot{
+    width: 100px;
+    border: solid 3px #ffb18b;
+    background-color: white;
+    text-align: center;
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+#atencao{
+    width: 250px;
+}
+
+
+
+#rodape{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    background-color: #ffb18b;
+    height: 90px;
+}
+#form{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+#botao{
+    background-color: #ffb18b;
+    font-size: 20px;
+    width: 70px;
+    height: 30px;
+    color: white;
+    border: solid 3px white;
+}
+#novidds{
+    font-size: 30px;
+    color: white;
+    padding-left: 10px;
+}
+#redessociais{
+    display: flex;
+}
+.sociais{
+    width: 40px;
+    height: 40px;
+    color:white;
+    margin: 30px 10px 30px 10px;
+}
+.nome_email{
+    font-size: 20px;
+}
