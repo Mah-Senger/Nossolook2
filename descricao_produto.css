@@ -97,6 +97,12 @@
     color: black;
     font-size: 15px;
 }
+#titdisp{
+    font-size: 40px;
+    color: #ffb18b;
+    margin-left: 30px;
+    margin-top: 40px;
+}
 #titdesc{
     font-size: 40px;
     color: #ffb18b;

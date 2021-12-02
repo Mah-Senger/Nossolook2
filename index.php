@@ -51,14 +51,15 @@
         $comando = selecionar_tudo ();
         $resultado= mysqli_query($conexao, $comando);
 
-
+        
         while($retorno= mysqli_fetch_assoc($resultado)){
+            $id= $retorno["id"];
     ?>
         <div class="prod">
             <img src="roupas/shorts1.jpg" alt="Shorts 1" class="imagens_prod">
             <p class="descricao"><?=$retorno["titulo"];?></p>
             <p class="preco"><?php echo "R$ " . $retorno["preco"];?></p>
-            <a href="" class="linkcomprar"><p class="comprar">Comprar</p></a>
+            <a href="descricao_produto.php?id_produto=<?=$id?>" class="linkcomprar"><p class="comprar">Comprar</p></a>
         </div>
     </div>
     <?php
