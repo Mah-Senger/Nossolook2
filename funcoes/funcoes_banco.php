@@ -26,8 +26,9 @@ function selecionar_id($id){
     return $comando;
 }
 
-function busca(){
-
+function busca($busca){
+    $comando = "SELECT * FROM produto WHERE titulo like'%$busca%'";
+    return $comando;
 }
 
 

@@ -14,6 +14,11 @@
     </div>
     <div id="cabecalho">
         <div><img src="logo.jpg" alt="logo" id="logo"></div>
+        <div>
+            <form action="index.php" method="get">
+                <input type="text" name="busca" id="busca" placeholder="Pesquisar...">
+            </form>
+        </div>
         <div id="opcoes">
             <?php
             session_start();
@@ -41,16 +46,24 @@
 
 
     <div id="promo"><a href="pag_blusa2.html"><img src="roupas/promocao.jpg" alt="promoção tops" id="promo_tops"></a></div>
-    <div id="produtos">
     <?php
 
         require_once  "funcoes/conexao.php" ;
         require_once  "funcoes/funcoes_banco.php" ;
 
         $conexao = conexao ();
-        $comando = selecionar_tudo ();
+
+        if(isset($_GET["busca"])){
+            $busca = $_GET["busca"];
+            echo "<p id='procurando_por'>Procurando por: $busca</p>";
+            $comando = busca($busca);
+        }else{
+            echo "<p id='procurando_por'>Todos os produtos: </p>";
+            $comando = selecionar_tudo ();
+        }
         $resultado= mysqli_query($conexao, $comando);
 
+        echo "<div id='produtos'>";
         
         while($retorno= mysqli_fetch_assoc($resultado)){
             $id= $retorno["id"];
