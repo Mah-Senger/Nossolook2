@@ -19,7 +19,7 @@
             session_start();
 
             if(isset($_SESSION["nome_usuario"])){
-                echo "<a href='carrinho.html'><ion-icon name='cart-outline' title='Carrinho' class='icons'></ion-icon></a>";
+                echo "<a href='carrinho.php'><ion-icon name='cart-outline' title='Carrinho' class='icons'></ion-icon></a>";
                 echo "<a href='sair.php'><ion-icon name='person-circle-outline'  class='icons'></ion-icon></a>";
                 echo "<a href='n_pedido.html'><ion-icon name='cube-outline' class='icons'></ion-icon></a>";
             }else{
@@ -90,8 +90,8 @@
             <form action="resul_descr.php" method="post">
                 <input type="hidden" name="id" value="<?=$id?>">
 
-                <label for="tm" class="tm_cor">Tamanho:</label>
-                <select id="tm">
+                <label for="tm" class="tm_cor" >Tamanho:</label>
+                <select id="tm" name="tamanho">
 
                 <?php
 
@@ -104,8 +104,8 @@
                 </select>
                 <br>
                 <br>
-                <label for="quant" class="tm_cor">Quantidade:</label>
-                <select  id="quant">
+                <label for="quant" class="tm_cor" >Quantidade:</label>
+                <select  id="quant" name="quant">
                     <?php
                    $quant=0;
 
