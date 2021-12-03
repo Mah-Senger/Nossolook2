@@ -1,15 +1,9 @@
 <?php 
     $titulo = "Acompanhar";
-    $css = "acom_pedido";
+    $css = "acomp_pedido";
     require_once('templates/header.php') 
 ?>
-    <div id="menu">
-        <a href="index.php" class="opcoes_menu"><p>Home</p></a>
-        <a href="categoria.php?id=1" class="opcoes_menu"><p>Blusas</p></a>
-        <a href="categoria.php?id=2" class="opcoes_menu"><p>Vestidos</p></a>
-        <a href="categoria.php?id=3" class="opcoes_menu"><p>Calças e Shorts</p></a>
-        <a href="sobre.html" class="opcoes_menu"><p>Sobre nós</p></a>
-    </div>
+
     <div id="tudo">
     <div id="esquerda">
         <div class="acomp">

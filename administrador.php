@@ -67,7 +67,7 @@
         <div class="produto"> <li><div class="lado"><img src='roupas\<?=$resultado["imagem"]?>' alt="<?=$resultado["titulo"]?>">
             <h3><a href="pag_produto.php?id=<?=$resultado["id"]?>" class="cor"><?=$resultado["titulo"]?></a></h3></div></li></div>
             <div class="quant"><li class="quantidade"><?=$soma_estoque?></li></div>
-            <div class="preço"><li><?=$resultado["preco"]?></li></div>
+            <div class="preço"><li>R$<?=$resultado["preco"]?></li></div>
             <div class="editar"><li><a href="editar.php?id=<?=$id?>" class="botaos">Editar</a></li></div>
             <div class="remover"><li><a href="excluir_produto.php?id=<?=$id?>" class="botaos">Remover</a></li></div>
          </ul>
@@ -75,6 +75,23 @@
     </div>
     </div>
     </div>
-<?php 
-    require_once('templates/footer.php') 
-?>
+
+<div id="rodape">
+        <div>
+        <p id="novidds">Fique por dentro das novidades!!</p>
+        <form action="" method="" id="form">
+            <input type="text" class="nome_email" placeholder="Nome">
+            <input type="email" class="nome_email" placeholder="Email">
+            <button type="submit" id="botao">Enviar</button>
+        </form>
+    </div>
+    <div id="redessociais">
+        <a href="https://www.facebook.com/"><ion-icon name="logo-facebook" class="sociais"></ion-icon></a>
+        <a href="https://www.instagram.com/"><ion-icon name="logo-instagram" class="sociais"></ion-icon></a>
+        <a href="https://twitter.com/"><ion-icon name="logo-twitter" class="sociais"></ion-icon></a>
+        <a href=""><ion-icon name="logo-whatsapp" class="sociais"></ion-icon></a>
+        <a href="sair_admin.php"><ion-icon name="exit-outline" class="sociais"></ion-icon></a>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+</body>
+</html>
