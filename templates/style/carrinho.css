@@ -1,0 +1,107 @@
+.produto{
+    width: 300px;
+}
+h1{
+    color:#ffb18b;
+    margin: 50px;
+    margin-top: 50px;
+    font-size: 45px;
+}
+#tudo{
+    display: flex;
+}
+
+.lista{
+    display: flex;
+    list-style: none;
+    margin-left: 50px;
+    border-bottom: solid 4px #ffb18b;
+    align-items: center;
+}
+.li{
+    margin-right: 60px;
+    text-align: center ;
+    align-items: center;
+}
+.lado{
+    display: flex;
+}
+img{
+    width: 70px;
+    height: 80px;
+}
+.quant{
+    width: 150px;
+}
+.quantidade{
+    border:solid 2px #ffb18b;
+    width: 50px;
+    height: 20px;
+}
+.remover{
+    width: 120px;
+}
+.iconslixo{
+    color: black;
+}
+#frete{
+    border: solid 7px #ffb18b;
+    margin-left: 100px;
+    width: 350px;
+    margin-bottom: 20px;
+}
+#cep_prim{
+    margin-left: 20px;
+}
+#cep3{
+    border: solid 3px #ffb18b;
+    margin-left: 20px;
+    width: 200px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#tit_cep{
+    margin: 10px 0px 10px 20px;
+}
+#altcep{
+    margin: 10px 0px 20px 20px;
+}
+
+#resumo{
+    border: solid 7px #ffb18b;
+    margin-left: 100px;
+    width: 350px;
+}
+#h2{
+    margin: 20px;
+}
+.somar{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+#cima{
+    border-bottom: solid 2px #ffb18b;
+}
+.continuar{
+    font-size: 20px;
+    border: solid 3px #ffb18b;
+    margin:10px;
+    text-align: center;
+}
+#none{
+    text-decoration: none;
+    color: #ffb18b;
+}
+#finalizar{
+    font-size: 20px;
+    border: solid 3px #ffb18b;
+    background-color: #ffb18b;
+    margin:10px;
+    text-align: center;
+}
+#nao{
+    color: white;
+    text-decoration: none;
+}

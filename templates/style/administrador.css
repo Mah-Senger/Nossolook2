@@ -1,0 +1,71 @@
+#quadro{
+    border: solid 7px #ffb18b;
+    margin-left: 70px;
+    margin-right: 100px;
+    width: 150px;
+    height: 300px;
+}
+h2{
+    margin: 20px;
+}
+#cima{
+    border-bottom: solid 2px #ffb18b;
+}
+.none{
+    text-decoration: none;
+    color: gray;
+}
+.meio{
+    margin:20px;
+}
+
+.produto{
+    width: 300px;
+}
+h1{
+    color:#ffb18b;
+    margin: 20px;
+}
+#tudo{
+    display: flex;
+}
+
+.lista{
+    display: flex;
+    list-style: none;
+    margin-left: 20px;
+    border-bottom: solid 4px #ffb18b;
+    align-items: center;
+}
+li{
+    margin-right: 60px;
+    text-align: center ;
+}
+img{
+    width: 70px;
+    height: 80px;
+}
+.quant{
+    width: 130px;
+}
+.quantidade{
+    border:solid 2px #ffb18b;
+    width: 50px;
+    height: 20px;
+}
+.lado{
+    display: flex;
+}
+.botaos{
+    border: solid 3px #ffb18b;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+.editar{
+    width: 100px;
+}
+.cor{
+    text-decoration: none;
+    color: black;
+}

@@ -1,37 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="cadastrar.css"> 
-    <title>Cadastrar | Nosso Look</title>
-    <link rel="shortcut icon" href="logo_topo2.png">
-</head>
-<body>
-    <div id="cabecalho">
-        <div><img src="logo.jpg" alt="logo" id="logo"></div>
-        <div id="opcoes">
-            <?php
-            session_start();
-
-            if(isset($_SESSION["nome_usuario"])){
-                echo "<a href='carrinho.html'><ion-icon name='cart-outline' title='Carrinho' class='icons'></ion-icon></a>";
-                echo "<a href='sair.php'><ion-icon name='person-circle-outline'  class='icons'></ion-icon></a>";
-                echo "<a href='n_pedido.html'><ion-icon name='cube-outline' class='icons'></ion-icon></a>";
-            }else{
-                echo "<a href='entrar_cadastre-se.html'><ion-icon name='person-circle-outline'  class='icons'></ion-icon></a>";
-            }
-
-            ?>
-            
-        </div>
-    </div>
-    <div id="menu">
-        <a href="index.php" class="opcoes_menu"><p>Home</p></a>
-        <a href="categoria.php?id=1" class="opcoes_menu"><p>Blusas</p></a>
-        <a href="categoria.php?id=2" class="opcoes_menu"><p>Vestidos</p></a>
-        <a href="categoria.php?id=3" class="opcoes_menu"><p>Calças e Shorts</p></a>
-        <a href="sobre.html" class="opcoes_menu"><p>Sobre nós</p></a>
-    </div>
+<?php 
+    $titulo = "Cadastrar";
+    $css = "cadastrar";
+    require_once('templates/header.php') 
+?>
     
 
     <div id="tudo">

@@ -1,32 +1,9 @@
 <?php
-session_start();
+//session_start();
    
 if(!isset($_SESSION["usuario_admin"])){
     ?>
-    <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="entraradd.css"> 
-    <title>Entrar | Nosso Look</title>
-    <link rel="shortcut icon" href="logo_topo2.png">
-</head>
-<body>
-    <div id="cabecalho">
-        <div><img src="logo.jpg" alt="logo" id="logo"></div>
-        <div id="opcoes">
-            <a href="carrinho.html"><ion-icon name="cart-outline" title="Carrinho" class="icons"></ion-icon></a>
-            <a href="entrar_cadastre-se.html"><ion-icon name="person-circle-outline"  class="icons"></ion-icon></ion-icon></a>
-            <a href="n_pedido.html"><ion-icon name="cube-outline" class="icons"></ion-icon></ion-icon></a>
-        </div>
-    </div>
-    <div id="menu">
-        <a href="index.php" class="opcoes_menu"><p>Home</p></a>
-        <a href="blusas.html" class="opcoes_menu"><p>Blusas</p></a>
-        <a href="vestidos.html" class="opcoes_menu"><p>Vestidos</p></a>
-        <a href="calcas.html" class="opcoes_menu"><p>Calças e Shorts</p></a>
-        <a href="sobre.html" class="opcoes_menu"><p>Sobre nós</p></a>
-    </div>
+<?php require_once('templates/header.php') ?>
 
     <div id="tudo">
            <div id="dentro">

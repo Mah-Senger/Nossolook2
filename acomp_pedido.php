@@ -1,42 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="acomp_pedido.css">
-    <link rel="shortcut icon" href="logo_topo2.png">
-    <title>Acompanhar Pedido | Nosso Look</title>
-</head>
-<body>
-    <div id="promo_cep">
-        <p>Parcele Suas Compras Em Até 5X</p> 
-        <p>Frete Gratis Nas Compras Acima de R$199,99</p>
-        <p>Entregamos Para Todo o Brasil</p>
-    </div>
-    <div id="cabecalho">
-        <div><img src="logo.jpg" alt="logo" id="logo"></div>
-        <div id="opcoes">
-            <?php
-            session_start();
+<?php 
+    $titulo = "Acompanhar";
+    $css = "acom_pedido";
+    require_once('templates/header.php') 
+?>
 
-            if(isset($_SESSION["nome_usuario"])){
-                echo "<a href='carrinho.html'><ion-icon name='cart-outline' title='Carrinho' class='icons'></ion-icon></a>";
-                echo "<a href='sair.php'><ion-icon name='person-circle-outline'  class='icons'></ion-icon></a>";
-                echo "<a href='n_pedido.html'><ion-icon name='cube-outline' class='icons'></ion-icon></a>";
-            }else{
-                echo "<a href='entrar_cadastre-se.html'><ion-icon name='person-circle-outline'  class='icons'></ion-icon></a>";
-            }
-
-            ?>
-            
-        </div>
-    </div>
-    <div id="menu">
-        <a href="index.php" class="opcoes_menu"><p>Home</p></a>
-        <a href="categoria.php?id=1" class="opcoes_menu"><p>Blusas</p></a>
-        <a href="categoria.php?id=2" class="opcoes_menu"><p>Vestidos</p></a>
-        <a href="categoria.php?id=3" class="opcoes_menu"><p>Calças e Shorts</p></a>
-        <a href="sobre.html" class="opcoes_menu"><p>Sobre nós</p></a>
-    </div>
     <div id="tudo">
     <div id="esquerda">
         <div class="acomp">

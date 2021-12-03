@@ -1,0 +1,69 @@
+<?php 
+    $titulo = "Cadastre-se";
+    $css = "cadastre_se";
+    require_once('templates/header.php') 
+?>
+
+    <div id="cads">
+    <form action="resul_cadastre_se.php" method="post">
+        <input type="text" placeholder="Seu Nome Completo:*" name="nome" required class="campo_form">
+        <br>
+        <input type="email" placeholder="Email:*" name="email" required class="campo_form">
+        <br>
+        <input type="text" data-ls-module="charCounter" maxlength="11" placeholder="CPF:*" name="cpf" required class="campo_form2">
+        <br>
+        <label for="data" class="datanasc_sexo">Data de Nascimento:*</label>
+        <input type="date" id="data" name="data_nascimento" required class="campo_form3">
+        <br>
+        <label class="datanasc_sexo">Sexo:</Sexo:></label>
+        <input type="radio" id="sexof" name="sexo" value="F">
+        <label for="sexof" class="sexo_opc">Feminino</label>
+        <input type="radio" id="sexom" name="sexo" value="M">
+        <label for="sexom" class="sexo_opc">Masculino</label>
+        <br>
+        <input type="text" placeholder="Número de telefone" name="telefone" data-ls-module="charCounter" maxlength="12" class="campo_form2">
+        <br>
+        <label class="datanasc_sexo">Endereço: </label>
+        <br>
+        <input type="text" placeholder="Rua: Lorem Ipsum" name="end_rua" required class="campo_form">
+        <br>
+        <input type="text" placeholder="Nº: 000" name="end_num" required class="campo_form">
+        <br><p class="atencao_end">Atenção: Insira apenas números nesse campo.</p>
+        <br>
+        <input type="text" placeholder="Cidade-Estado" name="end_cidade" required class="campo_form">
+        <br>
+        <input type="text" placeholder="CEP: " name="end_cep" required class="campo_form">
+        <br><p class="atencao_end">Atenção: Insira apenas números nesse campo.</p>
+        <br>
+        <input type="password" placeholder="Informe uma senha*" name="senha" class="campo_form" required>
+        <br>
+        <input type="password" placeholder="Confirme sua senha*" name="conf_senha" class="campo_form" required>
+        <br>
+        <input type="checkbox" id="termos"required>
+        <label for="termos">LI, COMPREENDI E CONCORDO COM AS CONDIÇÕES GERAIS*</label>
+        <br>
+        <button type="submit" id="botao_cads">Cadastrar</button>
+    </form>
+</div>
+
+
+
+    <div id="rodape">
+        <div>
+        <p id="novidds">Fique por dentro das novidades!!</p>
+        <form action="" method="" id="form">
+            <input type="text" class="nome_email" placeholder="Nome">
+            <input type="email" class="nome_email" placeholder="Email">
+            <button type="submit" id="botao">Enviar</button>
+        </form>
+    </div>
+    <div id="redessociais">
+        <a href="https://www.facebook.com/"><ion-icon name="logo-facebook" class="sociais"></ion-icon></a>
+        <a href="https://www.instagram.com/"><ion-icon name="logo-instagram" class="sociais"></ion-icon></a>
+        <a href="https://twitter.com/"><ion-icon name="logo-twitter" class="sociais"></ion-icon></a>
+        <a href=""><ion-icon name="logo-whatsapp" class="sociais"></ion-icon></a>
+        <a href="entraradd.html"><ion-icon name="options" class="sociais"></ion-icon></a>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    </body>
+    </html>

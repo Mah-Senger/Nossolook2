@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="resul_cadastre_se.css"> 
-    <link rel="shortcut icon" href="logo_topo2.png">
-    <title>Cadastre-se | Nosso Look</title>
-</head>
-<body>
-    <div id="cabecalho">
-        <div><img src="logo.jpg" alt="logo" id="logo"></div>
-        <div id="opcoes">
-            <a href="carrinho.html"><ion-icon name="cart-outline" title="Carrinho" class="icons"></ion-icon></a>
-            <a href="entrar_cadastre-se.html"><ion-icon name="person-circle-outline"  class="icons"></ion-icon></ion-icon></a>
-            <a href="n_pedido.html"><ion-icon name="cube-outline" class="icons"></ion-icon></ion-icon></a>
-        </div>
-    </div>
+<?php require_once('templates/header.php') ?>
 
     <?php
 

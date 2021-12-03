@@ -1,0 +1,53 @@
+#cads{
+    margin-top: 80px;
+    margin-left: 230px;
+    border: 3px #ffb18b solid;
+    padding: 20px;
+    padding-left: 100px;
+    padding-top: 30px;
+    width: 800px;
+    height: 900px;
+}
+.campo_form{
+    width: 700px;
+    height: 35px;
+    border: solid 3px #ffb18b;
+    font-size: 30px;
+    margin-bottom: 15px;
+
+}
+.campo_form2{
+    width: 500px;
+    height: 35px;
+    border: solid 3px #ffb18b;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.campo_form3{
+    width: 360px;
+    height: 35px;
+    border: solid 3px #ffb18b;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.datanasc_sexo{
+    font-size: 35px;
+}
+.sexo_opc{
+    font-size: 30px;
+}
+.atencao_end{
+    color: red;
+    font-size: 23px;
+    margin-top: -10px;
+}
+#botao_cads{
+    background-color: white;
+    border:#ffb18b solid 6px;
+    width: 350px;
+    height: 70px;
+    font-size: 50px;
+    color: #ffb18b;
+    margin-top: 40px;
+    margin-left: 170px;
+}

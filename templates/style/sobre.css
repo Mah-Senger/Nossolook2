@@ -1,0 +1,45 @@
+.titulos{
+    color:#ffb18b;
+    margin-bottom: 20px;
+}
+#principal{
+    display: flex;
+    margin-left:135px;
+    margin-bottom: 50px;
+    margin-right: 135px;
+}
+#caixas{
+    display:flex;
+    margin-left: 135px;
+    margin-right: 135px;
+    justify-content: space-between;
+}
+#missao{
+    margin-right: 30px;
+}
+#valores{
+    margin-right: 30px;
+}
+.texto{
+    font-size: 20px;
+}
+
+#baixo{
+    margin-left:135px;
+    margin-top: 50px;
+}
+#nos{
+    display: flex;
+}
+.lado{
+    display: flex;
+    margin-right: 100px;
+}
+li{
+    list-style: none;
+    margin-bottom: 3px;
+    margin-left:15px ;
+}
+img{
+    height:170px ;
+}
