@@ -1,0 +1,21 @@
+h1{
+    font-size: 60px;
+    margin: 40px 0px 30px 300px;
+}
+#tit_ped{
+    border: 5px solid #ffb18b;
+    width: 450px;
+    height: 30px;
+    margin-left: 450px;
+    font-size: 30px;
+}
+#botao_num{
+    border: 5px solid #ffb18b;
+    background-color: #ffb18b;
+    color: white;
+    font-size: 30px;
+    height: 40px;
+    width: 300px;
+    margin-top: 10px;
+    margin-left: 530px;
+}

@@ -1,0 +1,53 @@
+#conteudo{
+    display: flex;
+}
+#quadro{
+    border: solid 7px #ffb18b;
+    margin-left: 70px;
+    margin-right: 100px;
+    width: 150px;
+    height: 300px;
+}
+h2{
+    margin: 20px;
+}
+#cima{
+    border-bottom: solid 2px #ffb18b;
+}
+.none{
+    text-decoration: none;
+    color: gray;
+}
+.meio{
+    margin:20px;
+}
+#img{
+    height: 300px;
+    margin-right: 50px;
+}
+h1{
+    color:#ffb18b;
+}
+.input{
+    border: solid 3px #ffb18b;
+    width: 250px;
+}
+.elemento_form{
+    margin-bottom: 20px;
+}
+.velho{
+    margin-bottom: 10px;
+}
+#bot{
+    width: 100px;
+    border: solid 3px #ffb18b;
+    background-color: white;
+    text-align: center;
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+#atencao{
+    width: 250px;
+}

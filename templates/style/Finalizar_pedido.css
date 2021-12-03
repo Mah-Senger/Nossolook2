@@ -1,0 +1,50 @@
+#tudo{
+    display: flex;
+    justify-content:center;
+}
+.prod_preco{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin-bottom: 10px;
+}
+
+#desc_prods{
+    width: 500px;
+    height: 150px;
+    border: solid 6px #ffb18b;
+    margin-right: 20px;
+    padding: 20px;
+}
+.endentr_cupomdesc{
+    border: solid 6px #ffb18b;
+    margin-right: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+#altend{
+    text-decoration: none;
+    color: blue;
+}
+#aplicar{
+    background-color: #ffb18b;
+    margin:10px;
+    color: white;
+    border:none;
+    padding: 5px;
+}
+#form_pag{
+    width: 300px;
+    border: solid 6px #ffb18b;
+    margin-right: 20px;
+    padding: 20px;
+}
+#finalizar_botao{
+    font-size: 25px;
+    border:none;
+    background-color: #ffb18b;
+    margin:10px;
+    width: 250px;
+    height: 50px;
+    color: white;
+}
