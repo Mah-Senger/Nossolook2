@@ -118,9 +118,9 @@
          <div class="elemento_form">
             <label for="categoria"><h4>Categoria:</h4></label>
             <select id="categoria" class="input" name="categoria">
-                <option>Blusas</option>
-                <option>Vestidos</option>
-                <option>Calças/Shorts</option>
+                <option value="1">Blusas</option>
+                <option value="2">Vestidos</option>
+                <option value="3">Calças/Shorts</option>
             </select>
          </div>
          <div class="elemento-form">

@@ -1,7 +1,7 @@
 <?php
 
 // Funções do banco de dados - PRODUTO
-function inserir(){
+function inserir_produto($titulo, $preco, $descricao, $imagem, $categoria){
     $comando= "INSERT INTO produto (titulo, preco, descricao, imagem, categoria) values ('$titulo', '$preco', '$descricao', '$imagem', '$categoria')";
     return $comando;
 }

@@ -17,15 +17,6 @@ $tam_44 = $_POST["tam_44"];
 $tam_46 = $_POST["tam_46"];
 
 
-if ($categoria == "Blusas"){
-    $categoria = "1";
-}else if($categoria == "Vestidos/saias"){
-    $categoria = "2";
-}else if($categoria == "Calças/shorts"){
-    $categoria = "3";
-}
-
-
 if($numeracao == "P-GG"){
     $tam_36 = 0;
     $tam_38 = 0;

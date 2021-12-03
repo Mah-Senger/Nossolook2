@@ -62,19 +62,19 @@
         $imagem = $retorno["imagem"];
 
         $resultado = mysqli_query($conexao, $comando_estoque);
-                $result_estoque = mysqli_fetch_assoc($resultado);
+        $result_estoque = mysqli_fetch_assoc($resultado);
 
-                $estoque = array();
-                $estoque["tam_P"] = $result_estoque["tam_P"];
-                $estoque["tam_M"] = $result_estoque["tam_M"];
-                $estoque["tam_G"] = $result_estoque["tam_G"];
-                $estoque["tam_GG"] = $result_estoque["tam_GG"];
-                $estoque["tam_36"] = $result_estoque["tam_36"];
-                $estoque["tam_38"] = $result_estoque["tam_38"];
-                $estoque["tam_40"] = $result_estoque["tam_40"];
-                $estoque["tam_42"] = $result_estoque["tam_42"];
-                $estoque["tam_44"] = $result_estoque["tam_44"];
-                $estoque["tam_46"] = $result_estoque["tam_46"];
+        $estoque = array();
+        $estoque["tam_P"] = $result_estoque["tam_P"];
+        $estoque["tam_M"] = $result_estoque["tam_M"];
+        $estoque["tam_G"] = $result_estoque["tam_G"];
+        $estoque["tam_GG"] = $result_estoque["tam_GG"];
+        $estoque["tam_36"] = $result_estoque["tam_36"];
+        $estoque["tam_38"] = $result_estoque["tam_38"];
+        $estoque["tam_40"] = $result_estoque["tam_40"];
+        $estoque["tam_42"] = $result_estoque["tam_42"];
+        $estoque["tam_44"] = $result_estoque["tam_44"];
+        $estoque["tam_46"] = $result_estoque["tam_46"];
 
 
 ?>
@@ -111,7 +111,7 @@
 
                    foreach ($estoque as $posicao => $valor_posicao){
                     if($valor_posicao != 0){
-                        $quant=$quant+$valor_posicao;
+                        $quant = $quant + $valor_posicao;
                 }	
             }
             for($i=1; $i<=$quant; $i++){
@@ -169,14 +169,51 @@
         <p class="textdesc"><?=$retorno["descricao"];?></p>
     </div>
     <div id="avali">
+    <?php
+       if(isset($_SESSION["nome_usuario"])){
+    ?>
         <p id="avaliacao"><strong>Escreva sua avaliação:</strong></p>
-        <form action="" method="">
-            <textarea cols="40" rows="5" class="ava" placeholder="Avaliação:"></textarea>
+        <form action="avaliar.php?id_produto=<?=$id?>" method="POST">
+            <textarea cols="40" rows="5" class="ava" placeholder="Avaliação:" name="avaliacao"></textarea>
             <br>
-            <input type="text" placeholder="Seu Nome:" class="ava">
+            <input type="text" placeholder="Seu Nome:" class="ava"  value="<?=$_SESSION['nome_usuario']?>">
             <br>
             <button type="submit" id="botao" class="botao_ava">Enviar</button>
         </form>
+
+        <?php 
+        }else{
+            echo "<h2 id='titulo_avaliacao'>Avaliações</h2>";
+        }
+        ?>
+
+        <?php
+            $id_produto = $_GET["id_produto"];
+
+            require_once "funcoes/conexao.php";
+            require_once "funcoes/funcoes_banco.php";
+
+            $conexao = conexao();
+            $comando = selecionar_avaliacao($id_produto);
+
+            $retorno = mysqli_query($conexao, $comando);
+            while($resultado = mysqli_fetch_assoc($retorno)){
+                $id_usuario = $resultado["id_usuario"];
+                
+                $comando_usuario = selecionar_usuario_avaliacao($id_usuario);
+                $retorno_usuario = mysqli_query($conexao, $comando_usuario);
+                $resultado_usuario = mysqli_fetch_assoc($retorno_usuario);
+                ?>
+                <div id="avaliacoes">
+                    <div>
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                    </div>
+                    <div>
+                        <h2><?=$resultado_usuario["nome"];?></h2>
+                        <p><?=$resultado["avaliacao"];?></p>
+                    </div>
+                </div>
+            <?php } ?>
     </div>
 
 

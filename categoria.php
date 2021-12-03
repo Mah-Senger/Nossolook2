@@ -54,10 +54,10 @@
         while($retorno = mysqli_fetch_assoc($resultado)){
         ?>
             <div class="prod">
-                <img src="roupas/shorts1.jpg" alt="Shorts 1" class="imagens_prod">
-                <p class="descricao"><?=$retorno["titulo"]?></p>
-                <p class="preco">R$ <?=$retorno["preco"]?></p>
-                <a href="shorts1.html" class="linkcomprar"><p class="comprar">Comprar</p></a>
+                <img src="roupas/<?=$retorno["imagem"];?>" alt="<?=$retorno["titulo"];?>" class="imagens_prod">
+                <p class="descricao"><?=$retorno["titulo"];?></p>
+                <p class="preco">R$ <?=$retorno["preco"];?></p>
+                <a href="descricao_produto.php?id_produto=<?=$retorno["id"];?>" class="linkcomprar"><p class="comprar">Comprar</p></a>
             </div>
         <?php
         }
