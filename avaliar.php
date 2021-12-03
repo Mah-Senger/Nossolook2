@@ -14,7 +14,7 @@ $comando = avaliar($id_usuario, $id_produto, $avaliacao);
 $resultado = mysqli_query($conexao, $comando);
 
 if($resultado){
-    header('Location: descr_cal2.php?id_produto=6');
+    header("Location: descricao_produto.php?id_produto=$id_produto");
 }else{
     echo "deu errado!";
 }
