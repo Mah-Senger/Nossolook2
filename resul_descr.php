@@ -20,7 +20,12 @@
     $imagem = $retorno["imagem"];
 
     if(isset($_SESSION["carrinho"][$id])){
-        echo "Você já tem esse produto no seu carrinho.";
+        if($_SESSION["carrinho"][$id]["tamanho"] != $tamanho){
+            echo "Você não pode adicionar o mesmo produto com dois (ou mais) tamanhos diferentes";
+        }else{
+            $_SESSION["carrinho"][$id]["quant"] += $quant;
+            header("Location: carrinho.php");
+        }
     }else{
         $_SESSION["carrinho"][$id]["imagem"] = $imagem;
         $_SESSION["carrinho"][$id]["titulo"] = $titulo;

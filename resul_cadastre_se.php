@@ -1,7 +1,7 @@
-<?php 
-    $titulo = "Cadastre-se";
-    $css = "resul_cadastre_se";
-    require_once('templates/header.php');
+<?php
+    
+    require_once  "funcoes/conexao.php" ;
+    require_once  "funcoes/funcoes_banco.php" ;
 
     $nome = $_POST["nome"];
     $email = $_POST["email"];
@@ -16,26 +16,31 @@
     $senha = $_POST["senha"];
     $conf_senha = $_POST["conf_senha"];
 
-    $array = array($end_rua, $end_num, $end_cidade, $end_cep);
-    $endereco = implode("&", $array);
+    $conexao = conexao();
+    $comando_email = login_usuario_email($email);
+    $resultado_email = mysqli_query($conexao, $comando_email);
 
-    require_once  "funcoes/conexao.php" ;
-    require_once  "funcoes/funcoes_banco.php" ;
+    $retorno = mysqli_fetch_assoc($resultado_email); 
 
-    $conexao = conexao ();
-    $comando = inserir_usuario ($nome, $email, $cpf, $data_nascimento, $sexo, $telefone, $endereco, $senha);
-    $resultado = mysqli_query($conexao, $comando);
+    if(!isset($retorno)){
+
+        $array = array($end_rua, $end_num, $end_cidade, $end_cep);
+        $endereco = implode("&", $array);
+
+        $comando = inserir_usuario ($nome, $email, $cpf, $data_nascimento, $sexo, $telefone, $endereco, $senha);
+        $resultado = mysqli_query($conexao, $comando);
 
 
-    if($resultado == true ){
-        echo "<h1>Seja bem-vindo!</h1><br>";
+        if($resultado == true ){
+            echo "<h1>Seja bem-vindo!</h1><br>";
+            echo "<a href='index.php' id='voltpag'>Voltar a Página Inicial</a>";
+        }else{
+            die ("Erro ao inserir no banco". mysqli_error($conexao));
+            echo "<a href='index.php' id='voltpag'>Voltar a Página Inicial</a>";
+        }
     }else{
-        die ("Erro ao inserir no banco". mysqli_error($conexao));
+        $erro = "Esse email já está cadastrado nesse sistema. <br>Tente <a href='entrar_cadastre-se.php'>Entrar numa conta já existente</a> ou <a href='cadastre-se.php'>crie uma nova conta</a> com um email diferente";
+        require_once('templates/erro.php'); 
     }
-    ?>
-
-    <a href="index.php" id="voltpag">Voltar a Página Inicial</a>
-
-<?php 
-    require_once('templates/footer.php') 
+ 
 ?>
