@@ -32,15 +32,15 @@
 
 
         if($resultado == true ){
-            echo "<h1>Seja bem-vindo!</h1><br>";
-            echo "<a href='index.php' id='voltpag'>Voltar a Página Inicial</a>";
+            $texto = "Seja bem-vindo!<br><a href='index.php'>Voltar a Página Inicial</a>";
+            require_once('templates/resultados.php'); 
         }else{
             die ("Erro ao inserir no banco". mysqli_error($conexao));
             echo "<a href='index.php' id='voltpag'>Voltar a Página Inicial</a>";
         }
     }else{
-        $erro = "Esse email já está cadastrado nesse sistema. <br>Tente <a href='entrar_cadastre-se.php'>Entrar numa conta já existente</a> ou <a href='cadastre-se.php'>crie uma nova conta</a> com um email diferente";
-        require_once('templates/erro.php'); 
+        $texto = "Esse email já está cadastrado nesse sistema. <br>Tente <a href='entrar_cadastre-se.php'>Entrar numa conta já existente</a> ou <a href='cadastre-se.php'>crie uma nova conta</a> com um email diferente";
+        require_once('templates/resultados.php'); 
     }
  
 ?>
