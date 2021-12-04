@@ -68,11 +68,14 @@
                 <label for="quant" class="tm_cor" >Quantidade:</label>
                 <select  id="quant" name="quant">
                     <?php
+                    
                    $quant=0;
 
                    foreach ($estoque as $posicao => $valor_posicao){
                     if($valor_posicao != 0){
-                        $quant = $quant + $valor_posicao;
+                        if($valor_posicao>$quant){
+                            $quant=$valor_posicao;
+                            }
                 }	
             }
             for($i=1; $i<=$quant; $i++){

@@ -1,0 +1,124 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#promo_cep{
+    display: flex;
+    justify-content: space-around;
+    background-color:#ada390;
+    color: white;
+}
+#cabecalho{
+    display: flex;
+    background-color: #ffb18b;
+    justify-content: space-between;
+}
+#logo{
+    width: 256px;
+    height: 75px;
+    margin: 15px;
+    
+}
+#busca{
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 30px;
+    height: 30px;
+    width: 300px;
+    color: #a9a9a9;
+    font-size: 20px;
+    padding: 5px;
+    padding-left: 20px;
+    margin-top: 30px;
+    margin-left: -170px;
+}
+#busca:focus{
+    border: #a9a9a9 solid 2px;
+    outline: 0;
+}
+#procurando_por{
+    font-size: 40px;
+    color: #ffb18b;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+#opcoes{
+    display: flex;
+    
+}
+.icons{
+    width: 40px;
+    height: 40px;
+    color:white;
+    margin: 30px 10px 30px 10px;
+}
+#menu{
+    display:flex;
+    border: solid 6px #ffb18b;
+    margin:20px;
+    justify-content: space-around;
+}
+.opcoes_menu{
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+
+
+.texto{
+    font-size: 30px;
+    margin-top: 50px;
+    margin-left: 400px;
+    margin-bottom: 50px;
+}
+#voltpag{
+    font-size: 40px;
+    background-color: #ffb18b;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    margin-left: 500px;
+    margin-top: 80px;;
+    margin-bottom: 80px;
+}
+
+
+
+
+#rodape{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    background-color: #ffb18b;
+    height: 90px;
+}
+#form{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+#botao{
+    background-color: #ffb18b;
+    font-size: 20px;
+    width: 70px;
+    height: 30px;
+    color: white;
+    border: solid 3px white;
+}
+#novidds{
+    font-size: 30px;
+    color: white;
+    padding-left: 10px;
+}
+#redessociais{
+    display: flex;
+}
+.sociais{
+    width: 40px;
+    height: 40px;
+    color:white;
+    margin: 30px 10px 30px 10px;
+}
+.nome_email{
+    font-size: 20px;
+}
