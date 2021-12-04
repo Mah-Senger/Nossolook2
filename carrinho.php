@@ -38,17 +38,7 @@
          <div>
          <div id="frete">
             <h2 id="tit_cep">Frete:</h2>
-            <div id="cep3">
-                <ion-icon name="ellipse" class="cep" id="cep_prim"></ion-icon>
-                <ion-icon name="ellipse" class="cep"></ion-icon>
-                <ion-icon name="ellipse" class="cep"></ion-icon>
-                <ion-icon name="ellipse" class="cep"></ion-icon>
-                <ion-icon name="ellipse" class="cep"></ion-icon>
-                <ion-icon name="ellipse" class="cep"></ion-icon>
-                <ion-icon name="ellipse" class="cep"></ion-icon>
-                <ion-icon name="ellipse" class="cep"></ion-icon>
-                <ion-icon name="eye-off-outline" id="cep2"></ion-icon>
-             </div>
+            <div id="cep3"><?=$_SESSION["endereco_usuario_cep"]?></div>
              <p id="altcep">Alterar CEP</p>
             </div>
          <div id="resumo">
@@ -59,23 +49,37 @@
                  $compra_final=0;
                  foreach($_SESSION["carrinho"] as $key => $value){
                     $preco_total= $value["preco"]*$value["quant"];
-                    $compra_final= $compra_final + $preco_total;
+                    $compra_final += $preco_total;
                     ?>
                  <div class="somar">
                  <p><?=$value["titulo"]?> (<?=$value["quant"]?>)</p>
                  <p>R$<?=$preco_total?></p>
                  </div>
                  <?php
-                   }
-                      /*<div class="somar">
-                                <p>Frete</p>
-                                if($compra_final>199.99){
-                         echo "<p>Grátis</p>";
-                         echo "</div>"
-                    }else{
-                        echo "<p>$frete</p>";
-                        echo "</div>"
-                    }*/
+                   //}
+                        $num_inicial =  substr($_SESSION["endereco_usuario_cep"], -8, 1);
+                        if($num_inicial == 0 or $num_inicial == 1){
+                        $frete = "19.99";
+                        }elseif($num_inicial == 2 or $num_inicial == 3){
+                            $frete = "24.99";
+                        }elseif($num_inicial == 4 or $num_inicial == 5){
+                            $frete = "29.99";
+                        }elseif($num_inicial == 6 or $num_inicial == 7){
+                            $frete = "34.99";
+                        }elseif($num_inicial == 8 or $num_inicial == 9){
+                            $frete = "39.99";
+                        }
+                    }
+                    echo "<div class='somar'>";
+                    echo "<p>Frete</p>";
+                        if($compra_final>=199.99){
+                            echo "<p>Grátis</p>";
+                            echo "</div>";
+                        }else{
+                            echo "<p>$frete</p>";
+                            echo "</div>";
+                        }
+                        $total = $compra_final + $frete;
 
                     ?>
                             
@@ -84,7 +88,7 @@
              <div id="baixo">
              <div class="somar">
                  <h3>Total</h3>
-                 <p>R$<?=$compra_final?></p>
+                 <p>R$<?=$total?></p>
              </div>
 
              <div id="finalizar"><a href="Finalizar_pedido.html" id="nao"><p>Finalizar pedido</p></a></div>
@@ -117,8 +121,8 @@
                  
              </div>
              <div id="baixo">
-             <div id="finalizar"><a href="Finalizar_pedido.html" id="nao"><p>Finalizar pedido</p></a></div>
-             <div class="continuar"><a href="pagina_inicial.html" id="none"><p>Continuar comprando</p></a></div>
+             <div id="finalizar"><a href="Finalizar_pedido.php" id="nao"><p>Finalizar pedido</p></a></div>
+             <div class="continuar"><a href="index.php" id="none"><p>Continuar comprando</p></a></div>
              </div>
          </div>
          </div>
@@ -127,7 +131,5 @@
     
     <?php
 }
-?>
-<?php 
     require_once('templates/footer.php') 
 ?>
