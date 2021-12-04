@@ -32,7 +32,6 @@
             <h2>Dados do usuário: </h2>
             <p>Nome: <?=$_SESSION["nome_usuario"]?></p>
             <p>Email: <?=$_SESSION["email_usuario"]?></p>
-            <p>CPF: <?=$_SESSION["cpf_usuario"]?></p>
             <p>Endereço: <?=$_SESSION["endereco_usuario_rua"]?>, <?=$_SESSION["endereco_usuario_num"]?>. <?=$_SESSION["endereco_usuario_cidade"]?>.</p>
             <p>CEP: <?=$_SESSION["endereco_usuario_cep"]?></p>
         </div>

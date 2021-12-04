@@ -9,7 +9,7 @@
     $comando = login_usuario_email($email);
     $resultado = mysqli_query($conexao, $comando);
 
-    $retorno = mysqli_fetch_assoc($resultado);
+    $retorno = mysqli_fetch_assoc($resultado); 
 
     session_start();
 
