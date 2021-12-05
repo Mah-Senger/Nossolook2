@@ -3,7 +3,7 @@
     $css = "entraradd";
     require_once('templates/header.php');
 
-    session_start();
+
     if(!isset($_SESSION["usuario_admin"])){
 ?>
 
@@ -34,4 +34,5 @@
 }else{
     header("Location: administrador.php");
 }
+
 ?>
