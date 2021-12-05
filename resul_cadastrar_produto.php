@@ -30,9 +30,9 @@ elseif (strlen(trim($preco)) == 0) {
     }
 
     $input['preco'] =
-            filter_input(INPUT_POST, 'preco', FILTER_VALIDATE_FLOAT);
+            filter_input(INPUT_POST, 'preco', FILTER_VALIDATE_INT);
             if ($input['preco'] == FALSE) {
-                $texto = "Você deve inserir um preço válido.<br><a href='cadastre_se.php'>Voltar</a>";
+                $texto = "Você deve inserir um preço válido.<br><a href='cadastrar.php'>Voltar</a>";
                 die(require_once('templates/resultados.php'));
          }
 
@@ -61,30 +61,6 @@ if($numeracao == "P-GG"){
         die(require_once('templates/resultados.php'));
             }
 
-            $input['tam_p'] =
-            filter_input(INPUT_POST, 'tam_p', FILTER_VALIDATE_INT);
-            if ($input['tam_p'] == FALSE) {
-                $texto = "Você deve inserir um número válido no estoque.<br><a href='cadastrar.php'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }
-         $input['tam_m'] =
-            filter_input(INPUT_POST, 'tam_m', FILTER_VALIDATE_INT);
-            if ($input['tam_m'] == FALSE) {
-                $texto = "Você deve inserir um número válido no estoque.<br><a href='cadastrar.php'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }
-         $input['tam_g'] =
-            filter_input(INPUT_POST, 'tam_g', FILTER_VALIDATE_INT);
-            if ($input['tam_g'] == FALSE) {
-                $texto = "Você deve inserir um número válido no estoque.<br><a href='cadastrar.php'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }
-         $input['tam_gg'] =
-            filter_input(INPUT_POST, 'tam_gg', FILTER_VALIDATE_INT);
-            if ($input['tam_gg'] == FALSE) {
-                $texto = "Você deve inserir um número válido no estoque.<br><a href='cadastrar.php'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }
 
 }elseif($numeracao == "36-46"){
     $tam_P = 0;
@@ -117,51 +93,15 @@ if($numeracao == "P-GG"){
         die(require_once('templates/resultados.php'));
     }
 
-    $input['tam_36'] =
-            filter_input(INPUT_POST, 'tam_36', FILTER_VALIDATE_INT);
-            if ($input['tam_36'] == FALSE) {
-                $texto = "Você deve inserir um número válido no estoque.<br><a href='cadastrar.php'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }
-         $input['tam_38'] =
-            filter_input(INPUT_POST, 'tam_38', FILTER_VALIDATE_INT);
-            if ($input['tam_38'] == FALSE) {
-                $texto = "Você deve inserir um número válido no estoque.<br><a href='cadastrar.php'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }
-         $input['tam_40'] =
-            filter_input(INPUT_POST, 'tam_40', FILTER_VALIDATE_INT);
-            if ($input['tam_40'] == FALSE) {
-                $texto = "Você deve inserir um número válido no estoque.<br><a href='cadastrar.php'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }
-         $input['tam_42'] =
-            filter_input(INPUT_POST, 'tam_42', FILTER_VALIDATE_INT);
-            if ($input['tam_42'] == FALSE) {
-                $texto = "Você deve inserir um número válido no estoque.<br><a href='cadastrar.php'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }
-         $input['tam_44'] =
-            filter_input(INPUT_POST, 'tam_44', FILTER_VALIDATE_INT);
-            if ($input['tam_44'] == FALSE) {
-                $texto = "Você deve inserir um número válido no estoque.<br><a href='cadastrar.php'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }
-         $input['tam_46'] =
-            filter_input(INPUT_POST, 'tam_46', FILTER_VALIDATE_INT);
-            if ($input['tam_46'] == FALSE) {
-                $texto = "Você deve inserir um número válido no estoque.<br><a href='cadastrar.php'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }
 }
 
 
 if($_FILES['imagem']['size'] == 0){
     $imagem = "sem_foto.png";
 }else{
-    $extensao = strtolower(end(explode( ".", $_FILES['imagem']["name"])));//pega a extensao do arquivo
-    $imagem = md5(time()) . "." . $extensao; //define o nome do arquivo
-    move_uploaded_file($_FILES['imagem']['tmp_name'], "roupas/" . $imagem); //efetua o upload
+    $extensao = strtolower(end(explode( ".", $_FILES['imagem']["name"])));
+    $imagem = md5(time()) . "." . $extensao; 
+    move_uploaded_file($_FILES['imagem']['tmp_name'], "roupas/" . $imagem); 
 }
 
 require_once  "funcoes/conexao.php" ;

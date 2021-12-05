@@ -1,5 +1,9 @@
-<?php
-
+<?php 
+ session_start();
+ if(!isset($_SESSION["usuario_admin"])){
+ $texto="Você não tem acesso para acessar essa página.<br><a href='index.php'>Voltar</a>";
+ require_once('templates/resultados.php');
+ }else{
 $id = $_POST["id"];
 $titulo = $_POST["titulo"];
 $descricao = $_POST["descricao"];
@@ -55,7 +59,7 @@ if($numeracao == "P-GG"){
         die(require_once('templates/resultados.php'));
             }
 
-            $input['tam_p'] =
+            /*$input['tam_p'] =
             filter_input(INPUT_POST, 'tam_p', FILTER_VALIDATE_INT);
             if ($input['tam_p'] == FALSE) {
                 $texto = "Você deve inserir um número válido no estoque.<br><a href='editar.php?id=$id'>Voltar</a>";
@@ -78,7 +82,7 @@ if($numeracao == "P-GG"){
             if ($input['tam_gg'] == FALSE) {
                 $texto = "Você deve inserir um número válido no estoque.<br><a href='editar.php?id=$id'>Voltar</a>";
                 die(require_once('templates/resultados.php'));
-         }
+         }*/
 
 }elseif($numeracao == "36-46"){
     $tam_P = 0;
@@ -111,7 +115,7 @@ if($numeracao == "P-GG"){
         die(require_once('templates/resultados.php'));
     }
 
-    $input['tam_36'] =
+    /*$input['tam_36'] =
             filter_input(INPUT_POST, 'tam_36', FILTER_VALIDATE_INT);
             if ($input['tam_36'] == FALSE) {
                 $texto = "Você deve inserir um número válido no estoque.<br><a href='editar.php?id=$id'>Voltar</a>";
@@ -146,7 +150,7 @@ if($numeracao == "P-GG"){
             if ($input['tam_46'] == FALSE) {
                 $texto = "Você deve inserir um número válido no estoque.<br><a href='editar.php?id=$id'>Voltar</a>";
                 die(require_once('templates/resultados.php'));
-         }
+         }*/
 }
 
 require_once "funcoes/conexao.php";
@@ -167,7 +171,7 @@ if($resultado_estoque and $resultado_produto){
     echo "A edição não ocorreu de forma satisfatória";
 }
 
-
+ }
 
 
 ?>

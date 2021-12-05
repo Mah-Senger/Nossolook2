@@ -1,8 +1,21 @@
 <?php 
+session_start();
+if(!isset($_SESSION["usuario_admin"])){
+$texto="Você não tem acesso para acessar essa página.<br><a href='index.php'>Voltar</a>";
+require_once('templates/resultados.php');
+}else{
     $titulo = "Cadastrar";
-    $css = "cadastrar";
-    require_once('templates/header.php') 
+$css = "cadastrar";
+require_once('templates/header_lite.php') ;
 ?>
+     <div id="menu">
+        <a href="index.php" class="opcoes_menu"><p>Home</p></a>
+        <a href="categoria.php?id=1" class="opcoes_menu"><p>Blusas</p></a>
+        <a href="categoria.php?id=2" class="opcoes_menu"><p>Vestidos</p></a>
+        <a href="categoria.php?id=3" class="opcoes_menu"><p>Calças e Shorts</p></a>
+        <a href="sobre.php" class="opcoes_menu"><p>Sobre nós</p></a>
+    </div>
+    
     <div id="tudo">
         <div id="quadro">
             <div id="cima">
@@ -113,3 +126,6 @@
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 </body>
 </html>
+<?php
+}
+?>

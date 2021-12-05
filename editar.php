@@ -1,9 +1,21 @@
 <?php 
+session_start();
+if(!isset($_SESSION["usuario_admin"])){
+$texto="Você não tem acesso para acessar essa página.<br><a href='index.php'>Voltar</a>";
+require_once('templates/resultados.php');
+}else{
     $titulo = "Editar";
     $css = "editar";
-    require_once('templates/header.php') 
+    require_once('templates/header_lite.php') 
 ?>
-
+<div id="menu">
+        <a href="index.php" class="opcoes_menu"><p>Home</p></a>
+        <a href="categoria.php?id=1" class="opcoes_menu"><p>Blusas</p></a>
+        <a href="categoria.php?id=2" class="opcoes_menu"><p>Vestidos</p></a>
+        <a href="categoria.php?id=3" class="opcoes_menu"><p>Calças e Shorts</p></a>
+        <a href="sobre.php" class="opcoes_menu"><p>Sobre nós</p></a>
+    </div>
+ 
     <div id="conteudo">
         <div id="quadro">
             <div id="cima">
@@ -111,6 +123,25 @@
      </div>
     </div>
 
+    <div id="rodape">
+        <div>
+        <p id="novidds">Fique por dentro das novidades!!</p>
+        <form action="" method="" id="form">
+            <input type="text" class="nome_email" placeholder="Nome">
+            <input type="email" class="nome_email" placeholder="Email">
+            <button type="submit" id="botao">Enviar</button>
+        </form>
+    </div>
+    <div id="redessociais">
+        <a href="https://www.facebook.com/"><ion-icon name="logo-facebook" class="sociais"></ion-icon></a>
+        <a href="https://www.instagram.com/"><ion-icon name="logo-instagram" class="sociais"></ion-icon></a>
+        <a href="https://twitter.com/"><ion-icon name="logo-twitter" class="sociais"></ion-icon></a>
+        <a href=""><ion-icon name="logo-whatsapp" class="sociais"></ion-icon></a>
+        <a href="sair_admin.php"><ion-icon name="exit-outline" class="sociais"></ion-icon></a>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+</body>
+</html>
 <?php 
-    require_once('templates/footer.php') 
+}
 ?>

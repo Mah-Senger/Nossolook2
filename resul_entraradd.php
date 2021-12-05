@@ -36,7 +36,8 @@ elseif (strlen(trim($senha_admin)) == 0) {
         }
 
     }else{
-        die ("Erro". mysqli_error($conexao));
+        $texto="Usuário ou senha incorretos.<br><a href='entraradd.php'>Voltar</a>";
+        die(require_once('templates/resultados.php'));
     }
 
 ?>

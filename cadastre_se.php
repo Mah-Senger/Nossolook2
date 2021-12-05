@@ -39,6 +39,7 @@
         <br>
         <input type="password" placeholder="Informe uma senha*" name="senha" class="campo_form" required>
         <br>
+        <p class="atencao_end">Atenção: Insira apenas números nesse campo, com no mínimo 8 dígitos.</p>
         <input type="password" placeholder="Confirme sua senha*" name="conf_senha" class="campo_form" required>
         <br>
         <input type="checkbox" id="termos"required>
