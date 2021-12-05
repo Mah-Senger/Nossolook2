@@ -27,7 +27,7 @@
 
             if(isset($_SESSION["nome_usuario"])){
                 echo "<a href='carrinho.php'><ion-icon name='cart-outline' title='Carrinho' class='icons'></ion-icon></a>";
-                echo "<a href='sair.php'><ion-icon name='person-circle-outline'  class='icons'></ion-icon></a>";
+                echo "<a href='conta_usuario.php'><ion-icon name='person-circle-outline'  class='icons'></ion-icon></a>";
                 echo "<a href='n_pedido.php'><ion-icon name='cube-outline' class='icons'></ion-icon></a>";
             }else{
                 echo "<a href='entrar_cadastre-se.php'><ion-icon name='person-circle-outline'  class='icons'></ion-icon></a>";
