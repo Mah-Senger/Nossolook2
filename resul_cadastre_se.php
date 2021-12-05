@@ -118,7 +118,7 @@
 
 
         if($resultado == true ){
-            $texto = "Seja bem-vindo!<br><a href='index.php'>Voltar a Página Inicial</a>";
+            $texto = "Seja bem-vindo!<br><a href='entrar_cadastre-se.php'>Agora, você pode entrar em sua conta</a>";
             require_once('templates/resultados.php'); 
         }else{
             die ("Erro ao inserir no banco". mysqli_error($conexao));
