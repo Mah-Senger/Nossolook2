@@ -1,9 +1,22 @@
 <?php 
+session_start();
+
+if(!isset($_SESSION["usuario_admin"])){
+    $texto="Você não tem permissão para acessar essa página.<br><a href='index.php'>Voltar</a>";
+    require_once('templates/resultados.php');
+}else{
     $titulo = "Administrador";
     $css = "administrador";
-    require_once('templates/header.php') 
+    require_once('templates/header_lite.php') ;
 ?>
-    
+     <div id="menu">
+        <a href="index.php" class="opcoes_menu"><p>Home</p></a>
+        <a href="categoria.php?id=1" class="opcoes_menu"><p>Blusas</p></a>
+        <a href="categoria.php?id=2" class="opcoes_menu"><p>Vestidos</p></a>
+        <a href="categoria.php?id=3" class="opcoes_menu"><p>Calças e Shorts</p></a>
+        <a href="sobre.php" class="opcoes_menu"><p>Sobre nós</p></a>
+    </div>
+     
     <div id="tudo">
     <div id="quadro">
         <div id="cima">
@@ -65,7 +78,7 @@
         ?>
         <ul class="lista">
         <div class="produto"> <li><div class="lado"><img src='roupas\<?=$resultado["imagem"]?>' alt="<?=$resultado["titulo"]?>">
-            <h3><a href="pag_produto.php?id=<?=$resultado["id"]?>" class="cor"><?=$resultado["titulo"]?></a></h3></div></li></div>
+            <h3><a href="descricao_produto.php?id_produto=<?=$resultado["id"]?>" class="cor"><?=$resultado["titulo"]?></a></h3></div></li></div>
             <div class="quant"><li class="quantidade"><?=$soma_estoque?></li></div>
             <div class="preço"><li>R$<?=$resultado["preco"]?></li></div>
             <div class="editar"><li><a href="editar.php?id=<?=$id?>" class="botaos">Editar</a></li></div>
@@ -95,3 +108,6 @@
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 </body>
 </html>
+<?php
+}
+?>

@@ -1,7 +1,24 @@
 <?php 
     $titulo = "Carrinho";
     $css = "carrinho";
-    require_once('templates/header.php') 
+    require_once('templates/header.php'); 
+
+    if(!isset($_SESSION["nome_usuario"])){
+        $texto="Você precisa estar logado para acessar o carrinho.<br><a href='entrar_cadastre-se.php'>Entrar ou Cadastrar</a>";
+        echo "<br>";
+    echo "<br>";
+    echo "<div id='div_erro'>";
+    echo "<h2 id='erro'>$texto</h2>";
+    echo "</div>";
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    require_once('templates/footer.php');
+    }else{
 ?>
 
         <div id="conteudo">
@@ -129,6 +146,7 @@
     </div>
     
     <?php
+    }
+    require_once('templates/footer.php') ;
 }
-    require_once('templates/footer.php') 
 ?>

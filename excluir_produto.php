@@ -1,22 +1,27 @@
 <?php
+session_start();
 
-$id = $_GET["id"];
-
-require_once "funcoes/conexao.php";
-require_once "funcoes/funcoes_banco.php";
-
-$conexao = conexao();
-$comando = deletar("$id");
-
-$resultado = mysqli_query($conexao, $comando);
-
-if($resultado){
-    header('Location: administrador.php');
+if(!isset($_SESSION["usuario_admin"])){
+    $texto="Você não tem permissão para acessar essa página.<br><a href='index.php'>Voltar</a>";
+    require_once('templates/resultados.php');
 }else{
-    echo "deu errado!";
+    $id = $_GET["id"];
+
+    require_once "funcoes/conexao.php";
+    require_once "funcoes/funcoes_banco.php";
+
+    $conexao = conexao();
+    $comando = deletar("$id");
+
+    $resultado = mysqli_query($conexao, $comando);
+
+    if($resultado){
+        header('Location: administrador.php');
+    }else{
+        echo "deu errado!";
+    }
+
 }
-
-
 
 
 ?>

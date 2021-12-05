@@ -4,7 +4,7 @@
     require_once('templates/header.php') 
 ?>
 
-    <div id="promo"><a href="pag_blusa2.html"><img src="roupas/promocao.jpg" alt="promoção tops" id="promo_tops"></a></div>
+    <div id="promo"><img src="roupas/promocao.jpg" alt="promoção tops" id="promo_tops"></div>
     <?php
 
         require_once  "funcoes/conexao.php" ;

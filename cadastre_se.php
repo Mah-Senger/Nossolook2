@@ -10,8 +10,6 @@
         <br>
         <input type="email" placeholder="Email:*" name="email" required class="campo_form">
         <br>
-        <input type="text" data-ls-module="charCounter" maxlength="11" placeholder="CPF:*" name="cpf" required class="campo_form2">
-        <br>
         <label for="data" class="datanasc_sexo">Data de Nascimento:*</label>
         <input type="date" id="data" name="data_nascimento" required class="campo_form3">
         <br>
@@ -37,6 +35,7 @@
         <br>
         <input type="password" placeholder="Informe uma senha*" name="senha" class="campo_form" required>
         <br>
+        <p class="atencao_end">Atenção: Insira apenas números nesse campo, com no mínimo 8 dígitos.</p>
         <input type="password" placeholder="Confirme sua senha*" name="conf_senha" class="campo_form" required>
         <br>
         <input type="checkbox" id="termos"required>

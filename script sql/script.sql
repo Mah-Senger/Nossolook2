@@ -34,7 +34,6 @@ create table usuario (
     id int NOT NULL AUTO_INCREMENT,
     nome varchar(255) NOT NULL,
     email varchar(255) NOT NULL,
-    cpf int(11) NOT NULL,
     data_nascimento date NOT NULL,
     sexo varchar(9) NOT NULL,
     telefone int(13) NOT NULL,

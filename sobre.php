@@ -7,7 +7,7 @@
      <div id="principal">
          <div><h1 class="titulos">Sobre nós</h1>
          <p> Somos alunas do Instituto Federal câmpus Itapetininga, fazemos o ensino médio integrado ao curso técnico de informática.
-            Com isso, no 4° Bimestre da matéria Linguagem de Programação Web 1, executamos esse projeto de criar um site de compras,
+            Com isso, no 4° Bimestre da matéria Linguagem de Programação Web 1 e 2, executamos esse projeto de criar um site de compras,
             surgindo assim a loja de roupas "Nosso Look".
          </p>
         </div>

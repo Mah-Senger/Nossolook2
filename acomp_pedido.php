@@ -1,8 +1,13 @@
 <?php 
-    $titulo = "Acompanhar";
+
+    $num=$_POST["num"];
+
+    if($num=="123"){
+        $titulo = "Acompanhar";
     $css = "acomp_pedido";
-    require_once('templates/header.php') 
+    require_once('templates/header.php') ;
 ?>
+
 
     <div id="tudo">
     <div id="esquerda">
@@ -65,5 +70,9 @@
     </div>
 </div>
 <?php 
+    }else{
+        $texto="Não temos esse pedido cadastrado.<br><a href='n_pedido.php'>Voltar</a>";
+        require_once('templates/resultados.php');
+    }
     require_once('templates/footer.php') 
 ?>
