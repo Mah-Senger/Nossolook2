@@ -1,6 +1,6 @@
 <?php
     $titulo = "Entrar na administração";
-    $css = "acom_pedido";
+    $css = "entraradd";
     require_once('templates/header.php');
 
     session_start();
@@ -30,8 +30,8 @@
            </div>
     </div> 
 <?php
+ require_once('templates/footer.php');
 }else{
-    require_once('templates/footer.php');
     header("Location: administrador.php");
 }
 ?>

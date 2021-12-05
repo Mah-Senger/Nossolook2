@@ -47,6 +47,10 @@ function inserir_estoque($id, $tam_P, $tam_M, $tam_G, $tam_GG, $tam_36, $tam_38,
     $comando = "INSERT INTO estoque (id_produto, tam_P, tam_M, tam_G, tam_GG, tam_36, tam_38, tam_40, tam_42, tam_44, tam_46) values ('$id', '$tam_P', '$tam_M', '$tam_G', '$tam_GG', '$tam_36', '$tam_38', '$tam_40', '$tam_42', '$tam_44', '$tam_46')";
     return $comando;
 }
+function editar_estoque_compra($tamanho, $nova_quantidade, $id){
+    $comando_estoque = "UPDATE estoque SET  $tamanho = '$nova_quantidade' WHERE id_produto = '$id'";
+    return $comando_estoque;
+}
 
 
 // Funções do banco de dados - CATEGORIA
@@ -84,11 +88,11 @@ function login_usuario_email($email){
     return $comando;
 }
 
+
 //Funções do banco de dados - ADMINISTRADOR
 function selecionar_admin($usuario_admin){
     $comando = "SELECT * FROM administrador WHERE usuario = '$usuario_admin'";
     return $comando;
 }
-
 
 ?>

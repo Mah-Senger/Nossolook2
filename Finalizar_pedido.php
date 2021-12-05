@@ -1,7 +1,7 @@
 <?php 
     $titulo = "Finalizar pedido";
     $css = "Finalizar_pedido";
-    require_once('templates/header.php') 
+    require_once('templates/header.php'); 
 ?>
 
     <div id="tudo">
@@ -11,29 +11,24 @@
                 <h2>Descrição dos Produtos</h2>
                 <h2>Preços</h2>
             </div>
+            <?php
+                if(isset($_SESSION["carrinho"])){
+        
+                foreach($_SESSION["carrinho"] as $key => $value){
+                    $preco_total= $value["preco"] * $value["quant"];
+            ?>
             <div class="prod_preco">
-                <p>Moletom Panda (2)</p>
-                <p>R$179,80</p>
+                <p><?=$value["titulo"]?> (<?=$value["quant"]?>)</p>
+                <p>R$ <?=$preco_total?></p>
             </div>
-            <div class="prod_preco">
-                <p>Blusa Cetim poá</p>
-                <p>R$59,90</p>
-            </div>
-            <div class="prod_preco">
-                <p>Calça jeans</p>
-                <p>R$99,90</p>
-            </div>
-            <div class="prod_preco">
-                <p>Vestido godê</p>
-                <p>R$170,00</p>
-            </div>
+            <?php } }?>
         </div>
         <div class="endentr_cupomdesc">
             <h2>Dados do usuário: </h2>
-            <p>Nome: <?=$_SESSION["nome_usuario"]?></p>
-            <p>Email: <?=$_SESSION["email_usuario"]?></p>
-            <p>Endereço: <?=$_SESSION["endereco_usuario_rua"]?>, <?=$_SESSION["endereco_usuario_num"]?>. <?=$_SESSION["endereco_usuario_cidade"]?>.</p>
-            <p>CEP: <?=$_SESSION["endereco_usuario_cep"]?></p>
+            <h3>Nome: </h3><p><?=$_SESSION["nome_usuario"]?></p><br>
+            <h3>Email: </h3><p><?=$_SESSION["email_usuario"]?></p><br>
+            <h3>Endereço: </h3><p><?=$_SESSION["endereco_usuario_rua"]?>, <?=$_SESSION["endereco_usuario_num"]?>. <?=$_SESSION["endereco_usuario_cidade"]?>.</p><br>
+            <h3>CEP: </h3><p><?=$_SESSION["endereco_usuario_cep"]?></p><br>
         </div>
         <div class="endentr_cupomdesc">
             <h2>Possui Cupom de Desconto??</h2>
@@ -46,7 +41,8 @@
         <div>
             <div id="form_pag">
                 <h2>Forma de Pagamento</h2>
-                <form action="obg_pela_pref.html" method="">
+                <form action="processar_compra.php" method="post">
+                    <input type="hidden" name="confirmacao" value="sim">
                     <input type="radio" id="boleto" name="formpag" required>
                     <label for="boleto">Boleto Bancário</label>
                     <br>
@@ -84,25 +80,6 @@
         </div>
     </div>
 
-
-
-
-    <div id="rodape">
-        <div>
-        <p id="novidds">Fique por dentro das novidades!!</p>
-        <form action="" method="" id="form">
-            <input type="text" class="nome_email" placeholder="Nome">
-            <input type="email" class="nome_email" placeholder="Email">
-            <button type="submit" id="botao">Enviar</button>
-        </form>
-    </div>
-    <div id="redessociais">
-        <a href="https://www.facebook.com/"><ion-icon name="logo-facebook" class="sociais"></ion-icon></a>
-        <a href="https://www.instagram.com/"><ion-icon name="logo-instagram" class="sociais"></ion-icon></a>
-        <a href="https://twitter.com/"><ion-icon name="logo-twitter" class="sociais"></ion-icon></a>
-        <a href=""><ion-icon name="logo-whatsapp" class="sociais"></ion-icon></a>
-        <a href="entraradd.php"><ion-icon name="options" class="sociais"></ion-icon></a>
-    </div>
-    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-</body>
-</html>
+<?php 
+    require_once('templates/footer.php'); 
+?>

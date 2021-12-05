@@ -20,12 +20,14 @@
             $_SESSION["id_usuario"] = $retorno["id"];
             $_SESSION["nome_usuario"] = $retorno["nome"];
             $_SESSION["email_usuario"] = $email;
-            $_SESSION["cpf_usuario"] = $retorno["cpf"];
+            $_SESSION["data_nasc_usuario"] = $retorno["data_nascimento"];
+            $_SESSION["sexo_usuario"] = $retorno["sexo"];
             $_SESSION["endereco_usuario_rua"] = $endereco_separado["0"];
             $_SESSION["endereco_usuario_num"] = $endereco_separado["1"];
             $_SESSION["endereco_usuario_cidade"] = $endereco_separado["2"];
             $_SESSION["endereco_usuario_cep"] = $endereco_separado["3"];
             $_SESSION["senha_usuario"] = $senha;
+
             header('Location: index.php');
         }else{
             echo("email e/ou senha incorretos!");
