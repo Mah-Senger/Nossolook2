@@ -1,8 +1,9 @@
 <?php 
 session_start();
+
 if(!isset($_SESSION["usuario_admin"])){
-$texto="Você não tem acesso para acessar essa página.<br><a href='index.php'>Voltar</a>";
-require_once('templates/resultados.php');
+    $texto="Você não tem acesso para acessar essa página.<br><a href='index.php'>Voltar</a>";
+    require_once('templates/resultados.php');
 }else{
     $titulo = "Editar";
     $css = "editar";

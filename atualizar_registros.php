@@ -59,31 +59,6 @@ if($numeracao == "P-GG"){
         die(require_once('templates/resultados.php'));
             }
 
-            /*$input['tam_p'] =
-            filter_input(INPUT_POST, 'tam_p', FILTER_VALIDATE_INT);
-            if ($input['tam_p'] == FALSE) {
-                $texto = "Você deve inserir um número válido no estoque.<br><a href='editar.php?id=$id'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }
-         $input['tam_m'] =
-            filter_input(INPUT_POST, 'tam_m', FILTER_VALIDATE_INT);
-            if ($input['tam_m'] == FALSE) {
-                $texto = "Você deve inserir um número válido no estoque.<br><a href='editar.php?id=$id'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }
-         $input['tam_g'] =
-            filter_input(INPUT_POST, 'tam_g', FILTER_VALIDATE_INT);
-            if ($input['tam_g'] == FALSE) {
-                $texto = "Você deve inserir um número válido no estoque.<br><a href='editar.php?id=$id'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }
-         $input['tam_gg'] =
-            filter_input(INPUT_POST, 'tam_gg', FILTER_VALIDATE_INT);
-            if ($input['tam_gg'] == FALSE) {
-                $texto = "Você deve inserir um número válido no estoque.<br><a href='editar.php?id=$id'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }*/
-
 }elseif($numeracao == "36-46"){
     $tam_P = 0;
     $tam_M = 0;
@@ -114,43 +89,6 @@ if($numeracao == "P-GG"){
         $texto = "Você deve inserir um valor ao tamanho 46.<br><a href='editar.php?id=$id'>Voltar</a>";
         die(require_once('templates/resultados.php'));
     }
-
-    /*$input['tam_36'] =
-            filter_input(INPUT_POST, 'tam_36', FILTER_VALIDATE_INT);
-            if ($input['tam_36'] == FALSE) {
-                $texto = "Você deve inserir um número válido no estoque.<br><a href='editar.php?id=$id'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }
-         $input['tam_38'] =
-            filter_input(INPUT_POST, 'tam_38', FILTER_VALIDATE_INT);
-            if ($input['tam_38'] == FALSE) {
-                $texto = "Você deve inserir um número válido no estoque.<br><a href='editar.php?id=$id'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }
-         $input['tam_40'] =
-            filter_input(INPUT_POST, 'tam_40', FILTER_VALIDATE_INT);
-            if ($input['tam_40'] == FALSE) {
-                $texto = "Você deve inserir um número válido no estoque.<br><a href='editar.php?id=$id'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }
-         $input['tam_42'] =
-            filter_input(INPUT_POST, 'tam_42', FILTER_VALIDATE_INT);
-            if ($input['tam_42'] == FALSE) {
-                $texto = "Você deve inserir um número válido no estoque.<br><a href='editar.php?id=$id'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }
-         $input['tam_44'] =
-            filter_input(INPUT_POST, 'tam_44', FILTER_VALIDATE_INT);
-            if ($input['tam_44'] == FALSE) {
-                $texto = "Você deve inserir um número válido no estoque.<br><a href='editar.php?id=$id'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }
-         $input['tam_46'] =
-            filter_input(INPUT_POST, 'tam_46', FILTER_VALIDATE_INT);
-            if ($input['tam_46'] == FALSE) {
-                $texto = "Você deve inserir um número válido no estoque.<br><a href='editar.php?id=$id'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }*/
 }
 
 require_once "funcoes/conexao.php";

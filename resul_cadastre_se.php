@@ -5,7 +5,6 @@
 
     $nome = $_POST["nome"];
     $email = $_POST["email"];
-    //$cpf = $_POST["cpf"];
     $data_nascimento = $_POST["data_nascimento"];
     $sexo = $_POST["sexo"];
     $telefone = $_POST["telefone"];
