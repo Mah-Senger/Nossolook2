@@ -30,9 +30,8 @@
            </div>
     </div> 
 <?php
-require_once('templates/footer.php'); 
+ require_once('templates/footer.php');
 }else{
-    require_once('templates/footer.php');
     header("Location: administrador.php");
 }
 
