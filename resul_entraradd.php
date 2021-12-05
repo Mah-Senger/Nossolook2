@@ -3,6 +3,15 @@
 $usuario_admin=$_POST["usuario_admin"];
 $senha_admin=$_POST["senha_admin"];
 
+if (strlen(trim($usuario_admin)) == 0) {
+    $texto = "Você deve inserir um nome válido.<br><a href='entraradd.php'>Voltar</a>";
+    die(require_once('templates/resultados.php'));
+    }
+elseif (strlen(trim($senha_admin)) == 0) {
+    $texto = "Você deve inserir uma senha válida.<br><a href='entraradd.php'>Voltar</a>";
+    die(require_once('templates/resultados.php'));
+    }
+
     require_once  "funcoes/conexao.php" ;
     require_once  "funcoes/funcoes_banco.php" ;
 
@@ -22,7 +31,8 @@ $senha_admin=$_POST["senha_admin"];
     
             header("Location: administrador.php");
         }else{
-            echo "Usuário ou senha incorretos.";
+            $texto = "Usuário ou senha incorretos.<br><a href='entraradd.php'>Voltar</a>";
+            require_once('templates/resultados.php');
         }
 
     }else{

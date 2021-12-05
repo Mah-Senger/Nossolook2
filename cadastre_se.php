@@ -10,8 +10,10 @@
         <br>
         <input type="email" placeholder="Email:*" name="email" required class="campo_form">
         <br>
-        <input type="text" data-ls-module="charCounter" maxlength="11" placeholder="CPF:*" name="cpf" required class="campo_form2">
-        <br>
+        <?php
+        //<input type="text" data-ls-module="charCounter" maxlength="11" placeholder="CPF:*" name="cpf" required class="campo_form2">
+        //<br>
+        ?>
         <label for="data" class="datanasc_sexo">Data de Nascimento:*</label>
         <input type="date" id="data" name="data_nascimento" required class="campo_form3">
         <br>

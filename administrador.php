@@ -65,7 +65,7 @@
         ?>
         <ul class="lista">
         <div class="produto"> <li><div class="lado"><img src='roupas\<?=$resultado["imagem"]?>' alt="<?=$resultado["titulo"]?>">
-            <h3><a href="pag_produto.php?id=<?=$resultado["id"]?>" class="cor"><?=$resultado["titulo"]?></a></h3></div></li></div>
+            <h3><a href="descricao_produto.php?id_produto=<?=$resultado["id"]?>" class="cor"><?=$resultado["titulo"]?></a></h3></div></li></div>
             <div class="quant"><li class="quantidade"><?=$soma_estoque?></li></div>
             <div class="preço"><li>R$<?=$resultado["preco"]?></li></div>
             <div class="editar"><li><a href="editar.php?id=<?=$id?>" class="botaos">Editar</a></li></div>

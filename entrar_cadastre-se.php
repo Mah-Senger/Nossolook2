@@ -2,7 +2,7 @@
     $titulo = "Entre ou cadastre-se";
     $css = "entrar_cadastre-se";
     require_once('templates/header.php') 
-?>
+?> 
     <div id="pag">
     <div id="entrar">
         <p class="title">Entrar</p>

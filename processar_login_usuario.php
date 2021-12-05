@@ -2,6 +2,15 @@
     $email = $_POST["email"];
     $senha = $_POST["senha"];
 
+    if (strlen(trim($email)) == 0) {
+        $texto = "Você deve inserir um e-mail válido.<br><a href='entrar_cadastre-se.php'>Voltar</a>";
+        die(require_once('templates/resultados.php'));
+        }
+    elseif (strlen(trim($senha)) == 0) {
+        $texto = "Você deve inserir uma senha válida.<br><a href='entrar_cadastre-se.php'>Voltar</a>";
+        die(require_once('templates/resultados.php'));
+        }
+
     require_once "funcoes/conexao.php";
     require_once "funcoes/funcoes_banco.php";
 
@@ -30,10 +39,13 @@
 
             header('Location: index.php');
         }else{
-            echo("email e/ou senha incorretos!");
+
+            $texto="email e/ou senha incorretos!<br><a href='entrar_cadastre-se.php'>Voltar</a>";
+            require_once('templates/resultados.php');
         }
     }else{
-        echo("email e/ou senha incorretos!");
+        $texto="email e/ou senha incorretos!<br><a href='entrar_cadastre-se.php'>Voltar</a>";
+        require_once('templates/resultados.php');
     }
 
 
