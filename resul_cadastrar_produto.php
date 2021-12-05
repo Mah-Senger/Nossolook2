@@ -29,13 +29,6 @@ elseif (strlen(trim($preco)) == 0) {
     die(require_once('templates/resultados.php'));
     }
 
-    $input['preco'] =
-            filter_input(INPUT_POST, 'preco', FILTER_VALIDATE_INT);
-            if ($input['preco'] == FALSE) {
-                $texto = "Você deve inserir um preço válido.<br><a href='cadastrar.php'>Voltar</a>";
-                die(require_once('templates/resultados.php'));
-         }
-
 if($numeracao == "P-GG"){
     $tam_36 = 0;
     $tam_38 = 0;
