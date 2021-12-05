@@ -4,7 +4,7 @@ $css = "conta_usuario";
 require_once('templates/header.php');
 
 if(!isset($_SESSION["nome_usuario"])){
-    $texto="Você precisa estar logado para acessar o carrinho.<br><a href='entrar_cadastre-se.php'>Entrar ou Cadastrar</a>";
+    $texto="Você precisa estar logado para acessar os dados da sua conta.<br><a href='entrar_cadastre-se.php'>Entrar ou Cadastrar</a>";
     echo "<br>";
     echo "<br>";
     echo "<div id='div_erro'>";

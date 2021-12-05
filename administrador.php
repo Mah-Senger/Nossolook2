@@ -1,12 +1,13 @@
 <?php 
 session_start();
+
 if(!isset($_SESSION["usuario_admin"])){
-$texto="Você não tem acesso para acessar essa página.<br><a href='index.php'>Voltar</a>";
-require_once('templates/resultados.php');
+    $texto="Você não tem permissão para acessar essa página.<br><a href='index.php'>Voltar</a>";
+    require_once('templates/resultados.php');
 }else{
     $titulo = "Administrador";
-$css = "administrador";
-require_once('templates/header_lite.php') ;
+    $css = "administrador";
+    require_once('templates/header_lite.php') ;
 ?>
      <div id="menu">
         <a href="index.php" class="opcoes_menu"><p>Home</p></a>
